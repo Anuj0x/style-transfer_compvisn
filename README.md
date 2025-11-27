@@ -1,7 +1,4 @@
-<br>
-<img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-gif.gif" alt="header" align="right" width="270"/>
-
-# Neural-Style-Transfer (NST)
+Style-Transfer
 
 Neural Style Transfer is the ability to create a new image (known as a pastiche) based on two input images: one representing the content and the other representing the artistic style.
 
@@ -94,24 +91,3 @@ Neural style transfer is a technique that is used to take two images—a content
 The following images were generated using no image manipulation program(s) other than the code described in this article.
 
 <img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-outputs.png" alt="content" width="700"/>
-
-
-## Acknowledgements <a name="ack"></a>
-
-These are some of the resources I referred to while working on this project. You might want to check them out.
-
-* PyTorch's [tutorial on NST](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html).
-* Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer).
-* The original paper on neural style transfer by [Gatys et al](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) .
-* The original paper on [VGG19](https://arxiv.org/abs/1409.1556).
-* [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/) for all the content and style images.
-
-
-## License <a name="license"></a>
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
-## Star History <a name="star-history"></a>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=nazianafis/Neural-Style-Transfer&type=Date)](https://star-history.com/#nazianafis/Neural-Style-Transfer&Date)
