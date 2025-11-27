@@ -1,0 +1,59 @@
+# Neural Style Transfer Configuration (JAX)
+# ===========================================
+
+# Image Processing
+image:
+  height: 400                    # Target height for processing (maintains aspect ratio)
+  content_format: "jpg"          # Output format
+  normalization: "imagenet"      # Normalization scheme: "imagenet" or "custom"
+
+# Optimization Parameters
+optimization:
+  num_iterations: 1000           # Total optimization iterations
+  learning_rate: 0.01           # Learning rate for Adam optimizer
+  optimizer: "adam"             # Optimizer: "adam", "sgd", "lbfgs"
+
+# Loss Weights
+weights:
+  content_weight: 1000000.0     # Content preservation weight (1e6)
+  style_weight: 10000.0         # Style transfer weight (1e4)
+  tv_weight: 0.000001          # Total variation regularization (1e-6)
+
+# Style Transfer Layers
+layers:
+  content_layer: "conv4_2"      # Layer for content representation
+  style_layers:                 # Layers for style representation
+    - "relu1_1"
+    - "relu2_1"
+    - "relu3_1"
+    - "relu4_1"
+    - "relu5_1"
+
+# Output Settings
+output:
+  save_frequency: 100           # Save intermediate results every N iterations (-1 for final only)
+  output_dir: "data/output-images"
+  prefix_format: "{content}_{style}_jax"  # Output filename format
+
+# Performance Settings
+performance:
+  jit_compile: true             # Enable JIT compilation
+  use_float32: true             # Use float32 precision (true) or float64 (false)
+  batch_size: 1                 # Batch size for processing
+
+# Hardware Acceleration
+hardware:
+  device: "auto"                # Device: "cpu", "gpu", or "auto"
+  num_threads: 4                # Number of CPU threads (if using CPU)
+
+# Logging
+logging:
+  level: "INFO"                 # Logging level: "DEBUG", "INFO", "WARNING", "ERROR"
+  log_file: "nst_log.txt"       # Log file path (optional)
+
+# Advanced Settings (for experimentation)
+advanced:
+  style_blend_weights: null      # Weights for different style layers (null for equal)
+  content_blur_sigma: 0.0        # Gaussian blur sigma for content (0 = no blur)
+  style_scale_factor: 1.0        # Scale factor for style features
+  init_method: "content"         # Initialization: "content", "random", "noise"

@@ -1,0 +1,31 @@
+# Modern JAX-based Neural Style Transfer Requirements
+# ===================================================
+
+# Core JAX framework for high-performance computing
+jax>=0.4.0
+jaxlib>=0.4.0
+
+# Flax for neural network definitions
+flax>=0.7.0
+
+# Optimization library for JAX
+optax>=0.1.0
+
+# Image processing
+opencv-python>=4.5.0
+Pillow>=8.0.0
+
+# PyTorch (only for weight conversion - can be removed if using JAX-native weights)
+torch>=1.10.0
+torchvision>=0.11.0
+
+# Scientific computing
+numpy>=1.20.0
+scipy>=1.7.0
+
+# Logging and utilities
+tqdm>=4.60.0
+matplotlib>=3.3.0
+
+# Optional: For CUDA support (uncomment if you have CUDA)
+# jax[cuda]>=0.4.0
